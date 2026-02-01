@@ -10,7 +10,7 @@ New-Item -ItemType Directory -Path $checkpoint -Force | Out-Null
 
 Write-Host "========================================="
 Write-Host "Phase 1: Restoring .mm files for 5 minutes"
-Write-Host "Launch the game NOW, then load Storytime"
+Write-Host "Launch the game NOW, then load your save"
 Write-Host "========================================="
 Write-Host ""
 
@@ -32,7 +32,7 @@ while ((Get-Date) - $startTime -lt [TimeSpan]::FromMinutes(5)) {
 
 Write-Host ""
 if ($count -eq 0) {
-    Write-Host "WARNING: No .mm files were ever restored. Storytime might be empty."
+    Write-Host "WARNING: No .mm files were ever restored. It might be empty."
 } else {
     Write-Host "Restored $count file(s) during Phase 1."
 }
